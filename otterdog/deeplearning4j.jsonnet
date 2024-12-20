@@ -1,6 +1,6 @@
 local orgs = import 'vendor/otterdog-defaults/otterdog-defaults.libsonnet';
 
-orgs.newOrg('deeplearning4j') {
+orgs.newOrg('technology.deeplearning4j', 'deeplearning4j') {
   settings+: {
     blog: "https://projects.eclipse.org/projects/technology.deeplearning4j",
     description: "The Eclipse Deeplearning4j Project",
