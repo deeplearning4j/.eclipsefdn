@@ -10,6 +10,23 @@ orgs.newOrg('technology.deeplearning4j', 'deeplearning4j') {
       actions_can_approve_pull_request_reviews: false,
     },
   },
+  secrets+: [
+    orgs.newOrgSecret('ORG_GPG_KEY_ID') {
+      value: 'pass:bots/technology.deeplearning4j/gpg/key_id',
+    },
+    orgs.newOrgSecret('ORG_GPG_PASSPHRASE') {
+      value: 'pass:bots/technology.deeplearning4j/gpg/passphrase',
+    },
+    orgs.newOrgSecret('ORG_GPG_PRIVATE_KEY') {
+      value: 'pass:bots/technology.deeplearning4j/gpg/secret-subkeys.asc',
+    },
+    orgs.newOrgSecret('ORG_OSSRH_PASSWORD') {
+      value: 'pass:bots/technology.deeplearning4j/central.sonatype.org/password',
+    },
+    orgs.newOrgSecret('ORG_OSSRH_USERNAME') {
+      value: 'pass:bots/technology.deeplearning4j/central.sonatype.org/username',
+    },
+  ],
   _repositories+:: [
     orgs.newRepo('deeplearning4j') {
       allow_merge_commit: true,
