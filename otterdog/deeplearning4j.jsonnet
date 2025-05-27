@@ -114,19 +114,19 @@ orgs.newOrg('technology.deeplearning4j', 'deeplearning4j') {
       ],
       secrets: [
         orgs.newRepoSecret('PACKAGES_GPG_KEY_NAME') {
-          value: "********",
+          value: 'pass:bots/technology.deeplearning4j/gpg/key_id',
         },
         orgs.newRepoSecret('PACKAGES_GPG_PASS') {
-          value: "********",
+          value: 'pass:bots/technology.deeplearning4j/gpg/passphrase',
         },
         orgs.newRepoSecret('SONATYPE_GPG_KEY') {
-          value: "********",
+          value: 'pass:bots/technology.deeplearning4j/gpg/secret-subkeys.asc',
         },
         orgs.newRepoSecret('SONATYPE_USER1_PASS') {
-          value: "********",
+          value: 'pass:bots/technology.deeplearning4j/central.sonatype.org/password',
         },
         orgs.newRepoSecret('SONATYPE_USER_1') {
-          value: "********",
+          value: 'pass:bots/technology.deeplearning4j/central.sonatype.org/username',
         },
       ],
       branch_protection_rules: [
