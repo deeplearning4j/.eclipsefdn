@@ -20,11 +20,11 @@ orgs.newOrg('technology.deeplearning4j', 'deeplearning4j') {
     orgs.newOrgSecret('ORG_GPG_PRIVATE_KEY') {
       value: 'pass:bots/technology.deeplearning4j/gpg/secret-subkeys.asc',
     },
-    orgs.newOrgSecret('ORG_OSSRH_PASSWORD') {
-      value: 'pass:bots/technology.deeplearning4j/central.sonatype.org/password',
+    orgs.newOrgSecret('CENTRAL_SONATYPE_TOKEN_PASSWORD') {
+      value: 'pass:bots/technology.deeplearning4j/central.sonatype.org/token-password',
     },
-    orgs.newOrgSecret('ORG_OSSRH_USERNAME') {
-      value: 'pass:bots/technology.deeplearning4j/central.sonatype.org/username',
+    orgs.newOrgSecret('CENTRAL_SONATYPE_TOKEN_USERNAME') {
+      value: 'pass:bots/technology.deeplearning4j/central.sonatype.org/token-username',
     },
   ],
   _repositories+:: [
@@ -121,12 +121,6 @@ orgs.newOrg('technology.deeplearning4j', 'deeplearning4j') {
         },
         orgs.newRepoSecret('SONATYPE_GPG_KEY') {
           value: 'pass:bots/technology.deeplearning4j/gpg/secret-subkeys.asc',
-        },
-        orgs.newRepoSecret('SONATYPE_USER1_PASS') {
-          value: 'pass:bots/technology.deeplearning4j/central.sonatype.org/password',
-        },
-        orgs.newRepoSecret('SONATYPE_USER_1') {
-          value: 'pass:bots/technology.deeplearning4j/central.sonatype.org/username',
         },
       ],
       branch_protection_rules: [
