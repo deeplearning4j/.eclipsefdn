@@ -11,20 +11,20 @@ orgs.newOrg('technology.deeplearning4j', 'deeplearning4j') {
     },
   },
   secrets+: [
-    orgs.newOrgSecret('ORG_GPG_KEY_ID') {
-      value: 'pass:bots/technology.deeplearning4j/gpg/key_id',
-    },
-    orgs.newOrgSecret('ORG_GPG_PASSPHRASE') {
-      value: 'pass:bots/technology.deeplearning4j/gpg/passphrase',
-    },
-    orgs.newOrgSecret('ORG_GPG_PRIVATE_KEY') {
-      value: 'pass:bots/technology.deeplearning4j/gpg/secret-subkeys.asc',
-    },
     orgs.newOrgSecret('CENTRAL_SONATYPE_TOKEN_PASSWORD') {
       value: 'pass:bots/technology.deeplearning4j/central.sonatype.org/token-password',
     },
     orgs.newOrgSecret('CENTRAL_SONATYPE_TOKEN_USERNAME') {
       value: 'pass:bots/technology.deeplearning4j/central.sonatype.org/token-username',
+    },
+    orgs.newOrgSecret('GPG_KEY_ID') {
+      value: 'pass:bots/technology.deeplearning4j/gpg/key_id',
+    },
+    orgs.newOrgSecret('GPG_PASSPHRASE') {
+      value: 'pass:bots/technology.deeplearning4j/gpg/passphrase',
+    },
+    orgs.newOrgSecret('GPG_PRIVATE_KEY') {
+      value: 'pass:bots/technology.deeplearning4j/gpg/secret-subkeys.asc',
     },
   ],
   _repositories+:: [
@@ -110,17 +110,6 @@ orgs.newOrg('technology.deeplearning4j', 'deeplearning4j') {
             "team_add"
           ],
           secret: "********",
-        },
-      ],
-      secrets: [
-        orgs.newRepoSecret('PACKAGES_GPG_KEY_NAME') {
-          value: 'pass:bots/technology.deeplearning4j/gpg/key_id',
-        },
-        orgs.newRepoSecret('PACKAGES_GPG_PASS') {
-          value: 'pass:bots/technology.deeplearning4j/gpg/passphrase',
-        },
-        orgs.newRepoSecret('SONATYPE_GPG_KEY') {
-          value: 'pass:bots/technology.deeplearning4j/gpg/secret-subkeys.asc',
         },
       ],
       branch_protection_rules: [
